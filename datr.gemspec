@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Datr::VERSION
   spec.authors       = ["Ignacio Contreras Pinilla"]
   spec.email         = ["ignacio@ignacio.cat"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Ruby implementation of some common data structures}
+  spec.summary       = %q{Common data structures}
   spec.homepage      = ""
   spec.license       = "MIT"
 
