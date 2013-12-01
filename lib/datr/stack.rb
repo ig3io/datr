@@ -22,6 +22,10 @@ module Datr
       @elements.empty?
     end
 
+    def size
+      @elements.size
+    end
+
   end
 
 end
