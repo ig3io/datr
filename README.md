@@ -1,6 +1,6 @@
 # Datr
 
-TODO: Write a gem description
+Ruby implementation of some common data structures.
 
 ## Installation
 
@@ -18,7 +18,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'datr'
+
+s = Datr::Stack.new
+s.push "hi"
+s.top # => "hi"
+s.empty? #=> false
+s.size # => 1
+s.pop # => "hi" 
+s.size # => 0
+s.empty? # => true
+
+q = Datr::Queue.new
+q.insert "hola"
+q.first # => "hola"
+q.empty? # => false
+q.size # => 1
+q.remove # => "hola"
+q.size # => 0
+q.empty? # => true
+```
 
 ## Contributing
 
