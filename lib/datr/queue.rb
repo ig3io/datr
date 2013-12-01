@@ -18,6 +18,10 @@ module Datr
       @elements.first
     end
 
+    def empty?
+      @elements.empty?
+    end
+
     def size
       @elements.size
     end
