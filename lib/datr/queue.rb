@@ -6,16 +6,20 @@ module Datr
       @elements = []
     end
 
-    def put(elem)
+    def insert elem
       @elements << elem
     end
 
-    def pop
+    def remove
       @elements.delete_at(0)
     end
 
     def first
       @elements.first
+    end
+
+    def size
+      @elements.size
     end
 
   end
