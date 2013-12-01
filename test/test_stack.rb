@@ -44,10 +44,10 @@ class TestStack < Test::Unit::TestCase
   end
 
   def test_push_and_pop_multiple_elements
-    [1..10].each do |i|
+    (1..10).each do |i|
       @s.push i
     end
-    [10..1].each do |i|
+    (10..1).each do |i|
       assert_equal i, @s.pop
     end
   end
