@@ -22,6 +22,16 @@ class TestQueue < Test::Unit::TestCase
     @q.remove
     assert @q.empty?
   end
+  
+  def test_a_new_queue_has_size_0
+    assert_equal 0, @q.size
+  end
+
+  def test_insert_increments_the_size_by_1
+    size = @q.size
+    @q.insert "hola"
+    assert_equal size + 1, @q.size
+  end
 
   def test_remove_returns_the_first_inserted_element
     @q.insert 1
@@ -33,14 +43,17 @@ class TestQueue < Test::Unit::TestCase
     assert_nil @q.remove
   end
 
-  def test_a_new_queue_has_size_0
-    assert_equal 0, @q.size
+  def test_first_returns_the_first_inserted_element
+    @q.insert 1
+    @q.insert 2
+    assert_equal 1, @q.first
   end
 
-  def test_insert_increments_the_size_by_1
-    size = @q.size
-    @q.insert "hola"
-    assert_equal size + 1, @q.size
+  def test_first_does_not_removes
+    @q.insert 1
+    @q.insert 2
+    assert_equal 1, @q.first
+    assert_equal 1, @q.first
   end
 
   def test_insert_and_remove_multiple_elements
