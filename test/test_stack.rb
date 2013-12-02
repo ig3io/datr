@@ -23,6 +23,27 @@ class TestStack < Test::Unit::TestCase
     assert @s.empty?
   end
 
+  def test_a_new_stack_has_size_0
+    assert_equal 0, @s.size
+  end
+
+  def test_push_increments_the_size_by_1
+    size = @s.size
+    @s.push "hola"
+    assert_equal size + 1, @s.size
+  end
+
+  def test_top_returns_last_pushed_element
+    @s.push "hola"
+    assert_equal "hola", @s.top
+  end
+
+  def test_top_does_not_pops
+    @s.push 1
+    assert_equal 1, @s.top
+    assert_equal 1, @s.top
+  end
+
   def test_pop_returns_the_last_pushed_element
     @s.push 1
     @s.push 2
@@ -33,15 +54,6 @@ class TestStack < Test::Unit::TestCase
     assert_nil @s.pop
   end
 
-  def test_a_new_stack_has_size_0
-    assert_equal 0, @s.size
-  end
-
-  def test_push_increments_the_size_by_1
-    size = @s.size
-    @s.push "hola"
-    assert_equal size + 1, @s.size
-  end
 
   def test_push_and_pop_multiple_elements
     (1..10).each do |i|
