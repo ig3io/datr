@@ -40,6 +40,10 @@ q.size # => 0
 q.empty? # => true
 ```
 
+## License
+
+MIT license. See the [LICENSE](/LICENSE) file for details.
+
 ## Contributing
 
 1. Fork it
